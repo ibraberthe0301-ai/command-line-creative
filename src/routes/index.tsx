@@ -216,7 +216,7 @@ function Index() {
             {projects.map((p) => (
               <article key={p.n} className="grid gap-8 rounded-xl border bg-card p-6 shadow-card transition-shadow hover:shadow-card-hover md:grid-cols-[1fr_1.3fr] md:p-10">
                 <div>
-                  <p className="font-mono text-5xl font-semibold text-primary/30">{p.n}</p>
+                  <p className="font-mono text-5xl font-semibold text-primary/45">{p.n}</p>
                   <h3 className="mt-2 text-2xl font-semibold">{p.title}</h3>
                   <p className="text-sm font-medium text-accent">{p.sub}</p>
                   <p className="mt-4 text-muted-foreground">{p.goal}</p>
