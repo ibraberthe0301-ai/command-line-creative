@@ -150,9 +150,9 @@ const certs = [
 
 function SectionTitle({ id, label, title }: { id: string; label: string; title: string }) {
   return (
-    <div id={id} className="mb-10 scroll-mt-24">
-      <p className="font-mono text-sm text-primary">// {label}</p>
-      <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">{title}</h2>
+    <div id={id} className="mb-8 scroll-mt-24">
+      <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">// {label}</p>
+      <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">{title}</h2>
     </div>
   );
 }
@@ -179,7 +179,7 @@ function Index() {
             <p className="inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-xs text-muted-foreground">
               <span className="size-2 rounded-full bg-primary" /> Open to internships (stage) · Gatineau / Ottawa
             </p>
-            <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.08] tracking-tight md:text-7xl">
               Ibrahim <span className="text-primary">Berthé</span>
             </h1>
             <p className="mt-4 font-mono text-accent">IT Support Technician & Junior Backend Developer</p>
@@ -188,10 +188,10 @@ function Index() {
               automation — and the kind of person who opens up the hardware when it breaks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#projects" className="rounded-md bg-primary px-5 py-3 font-medium text-primary-foreground transition hover:opacity-90">
+              <a href="#projects" className="rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md">
                 See projects
               </a>
-              <a href="mailto:ibraberthe0301@gmail.com" className="rounded-md border px-5 py-3 font-medium transition hover:border-primary hover:text-primary">
+              <a href="mailto:ibraberthe0301@gmail.com" className="rounded-lg border px-5 py-3 font-medium transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary">
                 Contact me
               </a>
             </div>
@@ -214,22 +214,22 @@ function Index() {
           <SectionTitle id="projects" label="01 — software & infrastructure" title="Selected projects" />
           <div className="space-y-8">
             {projects.map((p) => (
-              <article key={p.n} className="grid gap-8 rounded-xl border bg-card p-6 md:grid-cols-[1fr_1.3fr] md:p-10">
+              <article key={p.n} className="grid gap-8 rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md md:grid-cols-[1fr_1.3fr] md:p-10">
                 <div>
-                  <p className="font-mono text-5xl font-bold text-primary/40">{p.n}</p>
-                  <h3 className="mt-2 text-2xl font-bold">{p.title}</h3>
-                  <p className="font-mono text-sm text-accent">{p.sub}</p>
+                  <p className="font-mono text-5xl font-semibold text-primary/25">{p.n}</p>
+                  <h3 className="mt-2 text-2xl font-semibold">{p.title}</h3>
+                  <p className="text-sm font-medium text-accent">{p.sub}</p>
                   <p className="mt-4 text-muted-foreground">{p.goal}</p>
                   <div className="mt-5 flex flex-wrap gap-1.5">
                     {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
                   </div>
                   <div className="img-slot mt-6 aspect-video">[ screenshot ]</div>
                 </div>
-                <ul className="space-y-5">
+                <ul className="space-y-4">
                   {p.blocks.map(([h, t]) => (
-                    <li key={h} className="border-l-2 border-primary/40 pl-4">
+                    <li key={h} className="border-l-2 border-primary/30 pl-4">
                       <p className="font-mono text-sm font-semibold text-primary">{h}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{t}</p>
+                      <p className="mt-1 text-sm leading-normal text-muted-foreground">{t}</p>
                     </li>
                   ))}
                 </ul>
@@ -242,9 +242,9 @@ function Index() {
           <SectionTitle id="hardware" label="02 — hands-on troubleshooting" title="Hardware repairs" />
           <div className="grid gap-6 md:grid-cols-2">
             {hardware.map((h) => (
-              <article key={h.title} className="rounded-xl border bg-card p-6">
+              <article key={h.title} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
                 <div className="img-slot mb-5 aspect-video">[ photo ]</div>
-                <h3 className="text-xl font-bold">{h.title}</h3>
+                <h3 className="text-xl font-semibold">{h.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{h.text}</p>
                 {h.links.length > 0 && (
                   <div className="mt-4 flex gap-4 font-mono text-xs">
@@ -267,7 +267,7 @@ function Index() {
               <li key={e.role} className="mb-10 ml-6">
                 <span className="absolute -left-1.5 mt-2 size-3 rounded-full border-2 border-primary bg-background" />
                 <p className="font-mono text-xs text-muted-foreground">{e.date}</p>
-                <h3 className="mt-1 text-lg font-bold">{e.role}</h3>
+                <h3 className="mt-1 text-lg font-semibold">{e.role}</h3>
                 <p className="text-sm text-accent">{e.org}</p>
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
                   {e.points.map((p) => <li key={p}>{p}</li>)}
@@ -306,10 +306,10 @@ function Index() {
           </div>
         </section>
 
-        <section id="contact" className="scroll-mt-24 py-24">
-          <div className="rounded-2xl border bg-card p-10 text-center md:p-16">
-            <p className="font-mono text-sm text-primary">// 05 — contact</p>
-            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Let's work together.</h2>
+        <section id="contact" className="scroll-mt-24 py-20">
+          <div className="rounded-2xl border bg-card p-10 text-center shadow-sm md:p-16">
+            <p className="font-mono text-sm text-muted-foreground">// 05 — contact</p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Let's work together.</h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
               Looking for an internship in IT support or backend development. References available on request.
             </p>
