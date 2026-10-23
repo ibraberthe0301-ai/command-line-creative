@@ -188,7 +188,7 @@ function Index() {
               automation — and the kind of person who opens up the hardware when it breaks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#projects" className="rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md">
+              <a href="#projects" className="rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground shadow-card transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-card-hover">
                 See projects
               </a>
               <a href="mailto:ibraberthe0301@gmail.com" className="rounded-lg border px-5 py-3 font-medium transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary">
@@ -214,9 +214,9 @@ function Index() {
           <SectionTitle id="projects" label="01 — software & infrastructure" title="Selected projects" />
           <div className="space-y-8">
             {projects.map((p) => (
-              <article key={p.n} className="grid gap-8 rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md md:grid-cols-[1fr_1.3fr] md:p-10">
+              <article key={p.n} className="grid gap-8 rounded-xl border bg-card p-6 shadow-card transition-shadow hover:shadow-card-hover md:grid-cols-[1fr_1.3fr] md:p-10">
                 <div>
-                  <p className="font-mono text-5xl font-semibold text-primary/25">{p.n}</p>
+                  <p className="font-mono text-5xl font-semibold text-primary/30">{p.n}</p>
                   <h3 className="mt-2 text-2xl font-semibold">{p.title}</h3>
                   <p className="text-sm font-medium text-accent">{p.sub}</p>
                   <p className="mt-4 text-muted-foreground">{p.goal}</p>
@@ -242,7 +242,7 @@ function Index() {
           <SectionTitle id="hardware" label="02 — hands-on troubleshooting" title="Hardware repairs" />
           <div className="grid gap-6 md:grid-cols-2">
             {hardware.map((h) => (
-              <article key={h.title} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
+              <article key={h.title} className="rounded-xl border bg-card p-6 shadow-card transition-shadow hover:shadow-card-hover">
                 <div className="img-slot mb-5 aspect-video">[ photo ]</div>
                 <h3 className="text-xl font-semibold">{h.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{h.text}</p>
@@ -307,7 +307,7 @@ function Index() {
         </section>
 
         <section id="contact" className="scroll-mt-24 py-20">
-          <div className="rounded-2xl border bg-card p-10 text-center shadow-sm md:p-16">
+          <div className="rounded-2xl border bg-card p-10 text-center shadow-card md:p-16">
             <p className="font-mono text-sm text-muted-foreground">// 05 — contact</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Let's work together.</h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
