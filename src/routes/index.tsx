@@ -306,7 +306,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="contact" className="scroll-mt-24 py-24">
+        <section id="contact" className="scroll-mt-24 py-20">
           <div className="rounded-2xl border bg-card p-10 text-center shadow-sm md:p-16">
             <p className="font-mono text-sm text-muted-foreground">// 05 — contact</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Let's work together.</h2>
