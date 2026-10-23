@@ -242,9 +242,9 @@ function Index() {
           <SectionTitle id="hardware" label="02 — hands-on troubleshooting" title="Hardware repairs" />
           <div className="grid gap-6 md:grid-cols-2">
             {hardware.map((h) => (
-              <article key={h.title} className="rounded-xl border bg-card p-6">
+              <article key={h.title} className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
                 <div className="img-slot mb-5 aspect-video">[ photo ]</div>
-                <h3 className="text-xl font-bold">{h.title}</h3>
+                <h3 className="text-xl font-semibold">{h.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{h.text}</p>
                 {h.links.length > 0 && (
                   <div className="mt-4 flex gap-4 font-mono text-xs">
@@ -267,7 +267,7 @@ function Index() {
               <li key={e.role} className="mb-10 ml-6">
                 <span className="absolute -left-1.5 mt-2 size-3 rounded-full border-2 border-primary bg-background" />
                 <p className="font-mono text-xs text-muted-foreground">{e.date}</p>
-                <h3 className="mt-1 text-lg font-bold">{e.role}</h3>
+                <h3 className="mt-1 text-lg font-semibold">{e.role}</h3>
                 <p className="text-sm text-accent">{e.org}</p>
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
                   {e.points.map((p) => <li key={p}>{p}</li>)}
@@ -307,9 +307,9 @@ function Index() {
         </section>
 
         <section id="contact" className="scroll-mt-24 py-24">
-          <div className="rounded-2xl border bg-card p-10 text-center md:p-16">
-            <p className="font-mono text-sm text-primary">// 05 — contact</p>
-            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Let's work together.</h2>
+          <div className="rounded-2xl border bg-card p-10 text-center shadow-sm md:p-16">
+            <p className="font-mono text-sm text-muted-foreground">// 05 — contact</p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Let's work together.</h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
               Looking for an internship in IT support or backend development. References available on request.
             </p>
