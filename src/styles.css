@@ -30,35 +30,38 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --shadow-card: var(--shadow-soft);
+  --shadow-card-hover: var(--shadow-soft-hover);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: #fafafb;
-  --foreground: #1a1d23;
-  --card: #f3f5f9;
-  --card-foreground: #1a1d23;
-  --popover: #ffffff;
-  --popover-foreground: #1a1d23;
-  --primary: #47587a;
-  --primary-foreground: #fafafb;
-  --secondary: #eef1f6;
-  --secondary-foreground: #1a1d23;
-  --muted: #edf0f5;
-  --muted-foreground: #5d6472;
-  --accent: #47587a;
-  --accent-foreground: #fafafb;
-  --destructive: #c2554e;
-  --destructive-foreground: #fafafb;
-  --border: #e6e9ef;
-  --input: #e6e9ef;
-  --ring: #47587a;
-  --shadow-soft: 0 1px 2px rgba(26, 29, 35, 0.04), 0 10px 28px -14px rgba(26, 29, 35, 0.1);
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+  --primary: #22d3ee;
+  --primary-foreground: #0b1220;
+  --secondary: #1e293b;
+  --secondary-foreground: #f1f5f9;
+  --muted: #172033;
+  --muted-foreground: #94a3b8;
+  --accent: #22d3ee;
+  --accent-foreground: #0b1220;
+  --destructive: #f87171;
+  --destructive-foreground: #0b1220;
+  --border: #2b3a52;
+  --input: #2b3a52;
+  --ring: #22d3ee;
+  --shadow-soft: 0 1px 2px rgba(2, 6, 23, 0.45), 0 14px 34px -18px rgba(2, 6, 23, 0.85);
+  --shadow-soft-hover: 0 2px 4px rgba(2, 6, 23, 0.5), 0 22px 48px -20px rgba(34, 211, 238, 0.28);
 }
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; color-scheme: dark; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -82,7 +85,7 @@
 @utility img-slot {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, #ffffff 0%, var(--color-card) 100%);
+  background: linear-gradient(180deg, #24344d 0%, var(--color-card) 100%);
   box-shadow: var(--shadow-soft);
   color: var(--color-muted-foreground);
   font-family: var(--font-mono);
